@@ -12,3 +12,8 @@
 .button{position:relative;isolation:isolate;border:0;background:var(--cyan)}
 .button::before{content:"";position:absolute;z-index:-1;inset:1px;background:var(--ink);clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%)}
 .button:hover::before{background:var(--cyan)}
+
+/* Preserve both chamfered corners on the faction emblems. */
+.faction-mark{position:relative;isolation:isolate;border:0;background:var(--accent)}
+.faction-mark::before{content:"";position:absolute;z-index:-1;inset:1px;background:var(--ink);clip-path:polygon(11px 0,100% 0,100% calc(100% - 11px),calc(100% - 11px) 100%,0 100%,0 11px)}
+.faction:hover .faction-mark::before,.faction.active .faction-mark::before{background:color-mix(in srgb,var(--accent) 8%,var(--ink))}
