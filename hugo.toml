@@ -1,0 +1,7 @@
+baseURL = "/"
+locale = "en-GB"
+title = "Veilshift"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+description = "Veilshift is a cyber-occult expandable card game of tactical control across two realities."
