@@ -44,3 +44,25 @@
 .how-to-play-page{min-height:calc(100svh - 7rem);padding-top:6.8rem}
 .how-to-play-page .shift-copy h1{font-size:clamp(4rem,6vw,6.8rem);line-height:.82;letter-spacing:-.035em;margin:0 0 2rem}
 @media (max-width:700px){.game-page{padding-top:8rem}.section-intro h1{font-size:clamp(3.8rem,18vw,5.5rem)}.how-to-play-page{min-height:calc(100svh - 11rem);padding-top:5rem}.how-to-play-page .shift-copy h1{font-size:clamp(3.8rem,18vw,5.5rem)}}
+
+/* A concise homepage briefing: the core loop on one side, the win condition on the other. */
+.home-overview{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(32rem,1.1fr);gap:7vw;padding:9rem 5vw 10rem;background:linear-gradient(180deg,#03070d,#06101a);border-bottom:1px solid var(--line)}
+.home-overview::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(61,217,238,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(61,217,238,.035) 1px,transparent 1px);background-size:5rem 5rem}
+.overview-copy,.victory-panel{position:relative;z-index:1}
+.overview-copy h2{font-size:clamp(4.2rem,6.4vw,7rem);line-height:.82;letter-spacing:-.035em;margin:0 0 2rem}
+.overview-copy>p{max-width:42rem;color:#c4ccd2;font-size:1.05rem;line-height:1.75}
+.overview-loop{margin:2.7rem 0 2.5rem;padding:0;list-style:none;border-top:1px solid var(--line)}
+.overview-loop li{display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.overview-loop li>span{font:700 1.7rem var(--display);color:var(--cyan)}
+.overview-loop b{font:700 1.3rem var(--display);letter-spacing:.08em;text-transform:uppercase}
+.overview-loop p{margin:.2rem 0 0;color:var(--muted);font-size:.82rem}
+.victory-panel{align-self:center;border:1px solid var(--line);background:var(--ink-2);overflow:hidden}
+.victory-art{aspect-ratio:16/9;background:url("assets/junction-zero-garden.png") center/cover no-repeat;filter:saturate(.85) brightness(.82)}
+.victory-copy{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem}
+.victory-number{font:800 clamp(5rem,8vw,8rem)/.8 var(--display);color:var(--amber)}
+.victory-copy .section-number{margin-bottom:1rem;color:var(--amber)}
+.victory-copy h3{font-size:clamp(2.6rem,4vw,4.5rem);line-height:.88;letter-spacing:-.025em;margin:0 0 1.2rem}
+.victory-copy p:not(.facts){max-width:34rem;color:var(--muted);line-height:1.7}
+.victory-copy .facts{margin:1.8rem 0 0}
+@media (max-width:1000px){.home-overview{grid-template-columns:1fr}.victory-panel{width:100%}}
+@media (max-width:700px){.home-overview{gap:4.5rem;padding:5.5rem 1.3rem 6rem}.overview-copy h2{font-size:clamp(3.8rem,18vw,5.5rem)}.victory-copy{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.3rem}.victory-number{font-size:5.5rem}.victory-copy h3{font-size:3rem}.victory-art{aspect-ratio:4/3}}
