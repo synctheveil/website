@@ -35,3 +35,11 @@
 .playtest-page{min-height:calc(100svh - 7rem);padding-top:10rem}
 .playtest-page h1{font-size:clamp(4.5rem,7vw,7.5rem);line-height:.82;letter-spacing:-.035em;margin:0 0 1rem}
 @media (max-width:700px){.factions-page{padding-top:7rem}.factions-page>h1{margin-left:0;font-size:clamp(3.8rem,18vw,5.5rem)}.playtest-page{min-height:calc(100svh - 11rem);padding-top:8rem}.playtest-page h1{font-size:clamp(3.8rem,18vw,5.5rem)}}
+
+/* The game guide and rules use their original section compositions as full pages. */
+.game-page{min-height:calc(100svh - 7rem);padding-top:10rem}
+.section-intro h1{font-size:clamp(4.5rem,7vw,7.5rem);line-height:.82;letter-spacing:-.035em;margin:0 0 2rem}
+.section-intro h1 em{color:var(--cyan);font-style:normal}
+.how-to-play-page{min-height:calc(100svh - 7rem);padding-top:6.8rem}
+.how-to-play-page .shift-copy h1{font-size:clamp(4rem,6vw,6.8rem);line-height:.82;letter-spacing:-.035em;margin:0 0 2rem}
+@media (max-width:700px){.game-page{padding-top:8rem}.section-intro h1{font-size:clamp(3.8rem,18vw,5.5rem)}.how-to-play-page{min-height:calc(100svh - 11rem);padding-top:5rem}.how-to-play-page .shift-copy h1{font-size:clamp(3.8rem,18vw,5.5rem)}}

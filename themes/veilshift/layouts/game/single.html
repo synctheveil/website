@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <main id="main">
+    <section class="game-section game-page" aria-labelledby="game-title">
+      <div class="section-intro">
+        <h1 id="game-title">Control<br /><em>both</em> sides</h1>
+        <p>Every Junction exists in two connected realities. Commit to the <strong>Street</strong>. Cross into the <mark>Veil</mark>. Synchronize both to claim Influence.</p>
+        <ol class="principles" aria-label="How a turn develops">
+          <li><span>01</span><div><b>Deploy</b><p>Commit operatives to the city.</p></div></li>
+          <li><span>02</span><div><b>Shift</b><p>Cross layers to change the fight.</p></div></li>
+          <li><span>03</span><div><b>Synchronize</b><p>Control both realities. Score.</p></div></li>
+        </ol>
+        <p class="facts">1–4 players <i>/</i> 25–35 min <i>/</i> 15 min to learn</p>
+      </div>
+      <div class="junctions" data-junctions>
+        <article class="junction active" data-junction="0">
+          <button type="button" aria-expanded="true"><span>Ghost Market</span><small>01</small></button>
+          <div class="junction-visual ghost" aria-hidden="true"></div>
+          <div class="layer-readout"><span>Street <b>3</b></span><i>Shift</i><span>Veil <b>2</b></span></div>
+        </article>
+        <article class="junction" data-junction="1">
+          <button type="button" aria-expanded="false"><span>Helix Spire</span><small>02</small></button>
+          <div class="junction-visual helix-spire" aria-hidden="true"></div>
+          <div class="layer-readout"><span>Street <b>2</b></span><i>Shift</i><span>Veil <b>3</b></span></div>
+        </article>
+        <article class="junction" data-junction="2">
+          <button type="button" aria-expanded="false"><span>Zero Garden</span><small>03</small></button>
+          <div class="junction-visual garden" aria-hidden="true"></div>
+          <div class="layer-readout"><span>Street <b>2</b></span><i>Shift</i><span>Veil <b>2</b></span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+{{ end }}
