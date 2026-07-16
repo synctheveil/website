@@ -29,12 +29,13 @@
 .faction-stage[data-active="ashen"] .faction-portrait{background-image:url("assets/leader-helix.png");background-position:center}
 
 /* Standalone routes retain the original section language with page-scale spacing. */
-.factions-page{padding-top:10rem}
-.factions-page>h1{position:relative;z-index:1;margin:0 0 2rem 2vw;font-size:clamp(4.5rem,7vw,7.5rem);line-height:.82;letter-spacing:-.035em}
+.factions-page{padding-top:12.5rem;padding-bottom:10rem}
+.factions-page>h1{position:relative;z-index:1;margin:0 0 4rem 2vw;font-size:clamp(4.5rem,7vw,7.5rem);line-height:.82;letter-spacing:-.035em}
+.factions-page .faction-stage{margin-top:3.5rem}
 .faction-stage h2{font-size:clamp(2.8rem,4.5vw,5rem);line-height:.9;margin:1.3rem 0}
 .playtest-page{min-height:calc(100svh - 7rem);padding-top:10rem}
 .playtest-page h1{font-size:clamp(4.5rem,7vw,7.5rem);line-height:.82;letter-spacing:-.035em;margin:0 0 1rem}
-@media (max-width:700px){.factions-page{padding-top:7rem}.factions-page>h1{margin-left:0;font-size:clamp(3.8rem,18vw,5.5rem)}.playtest-page{min-height:calc(100svh - 11rem);padding-top:8rem}.playtest-page h1{font-size:clamp(3.8rem,18vw,5.5rem)}}
+@media (max-width:700px){.factions-page{padding-top:8.5rem;padding-bottom:6rem}.factions-page>h1{margin:0 0 2.75rem;font-size:clamp(3.8rem,18vw,5.5rem)}.factions-page .faction-stage{margin-top:2.5rem}.playtest-page{min-height:calc(100svh - 11rem);padding-top:8rem}.playtest-page h1{font-size:clamp(3.8rem,18vw,5.5rem)}}
 
 /* The game guide and rules use their original section compositions as full pages. */
 .game-page{min-height:calc(100svh - 7rem);padding-top:10rem}
