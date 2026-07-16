@@ -1,6 +1,7 @@
 baseURL = "/"
 locale = "en-GB"
 title = "Veilshift"
+theme = "veilshift"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 [params]

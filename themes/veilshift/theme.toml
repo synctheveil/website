@@ -1,0 +1,7 @@
+name = "Veilshift"
+license = "All rights reserved"
+description = "The cyber-occult launch theme for the Veilshift card game."
+min_version = "0.164.0"
+
+[author]
+name = "Project Veilshift"

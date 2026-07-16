@@ -1,29 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ .Params.description | default .Site.Params.description }}" />
-    <title>{{ .Site.Title }} — {{ .Title }}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ "styles.css" | relURL }}" />
-    <script src="{{ "script.js" | relURL }}" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-      <a class="wordmark" href="#top" aria-label="Veilshift home">VEILSHIFT</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#game">The game</a>
-        <a href="#factions">Factions</a>
-        <a href="#how-to-play">How to play</a>
-      </nav>
-      <a class="header-cta" href="#playtest">Enter the playtest</a>
-    </header>
-
+{{ define "main" }}
     <main id="main">
       <section id="top" class="hero" aria-labelledby="hero-title">
         <div class="hero-art" aria-hidden="true"></div>
@@ -113,10 +88,4 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <a class="wordmark" href="#top">VEILSHIFT</a>
-      <nav aria-label="Footer navigation"><a href="#how-to-play">Rules</a><a href="#game">Game guide</a><a href="#playtest">Project status</a></nav>
-      <p>© 2026 Veilshift</p>
-    </footer>
-  </body>
-</html>
+{{ end }}

@@ -1,0 +1,9 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ .Params.description | default .Site.Params.description }}" />
+<title>{{ .Site.Title }}{{ with .Title }} — {{ . }}{{ end }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{ "styles.css" | relURL }}" />
+<script src="{{ "script.js" | relURL }}" defer></script>
