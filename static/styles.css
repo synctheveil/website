@@ -17,3 +17,13 @@
 .faction-mark{position:relative;isolation:isolate;border:0;background:var(--accent)}
 .faction-mark::before{content:"";position:absolute;z-index:-1;inset:1px;background:var(--ink);clip-path:polygon(11px 0,100% 0,100% calc(100% - 11px),calc(100% - 11px) 100%,0 100%,0 11px)}
 .faction:hover .faction-mark::before,.faction.active .faction-mark::before{background:color-mix(in srgb,var(--accent) 8%,var(--ink))}
+
+/* Use native square source panels so responsive crops never distort the art. */
+.junction-visual{background-size:cover;background-position:center;background-repeat:no-repeat}
+.junction-visual.ghost{background-image:url("assets/junction-ghost-market.png")}
+.junction-visual.helix-spire{background-image:url("assets/junction-helix-spire.png")}
+.junction-visual.garden{background-image:url("assets/junction-zero-garden.png")}
+.shift-image{background-image:url("assets/leader-neon.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+.faction-portrait{background-image:url("assets/leader-helix.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+.faction-stage[data-active="neon"] .faction-portrait,.faction-stage[data-active="null"] .faction-portrait{background-image:url("assets/leader-neon.png");background-position:center}
+.faction-stage[data-active="ashen"] .faction-portrait{background-image:url("assets/leader-helix.png");background-position:center}
