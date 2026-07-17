@@ -24,9 +24,10 @@
 .junction-visual.helix-spire{background-image:url("assets/junction-helix-spire.png")}
 .junction-visual.garden{background-image:url("assets/junction-zero-garden.png")}
 .shift-image{background-image:url("assets/leader-neon.png");background-size:cover;background-position:center;background-repeat:no-repeat}
-.faction-portrait{background-image:url("assets/leader-helix.png");background-size:cover;background-position:center;background-repeat:no-repeat}
-.faction-stage[data-active="neon"] .faction-portrait,.faction-stage[data-active="null"] .faction-portrait{background-image:url("assets/leader-neon.png");background-position:center}
-.faction-stage[data-active="ashen"] .faction-portrait{background-image:url("assets/leader-helix.png");background-position:center}
+.faction-portrait{background-image:url("assets/avatar-selene-voss.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+.faction-stage[data-active="neon"] .faction-portrait{background-image:url("assets/avatar-mara-vey.png")}
+.faction-stage[data-active="ashen"] .faction-portrait{background-image:url("assets/avatar-lady-veyra-sorn.png");filter:none}
+.faction-stage[data-active="null"] .faction-portrait{background-image:url("assets/avatar-node-7.png");filter:none}
 
 /* Standalone routes retain the original section language with page-scale spacing. */
 .factions-page{padding-top:12.5rem;padding-bottom:10rem}
