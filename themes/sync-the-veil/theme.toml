@@ -1,0 +1,7 @@
+name = "Sync the Veil"
+license = "All rights reserved"
+description = "The cyber-occult launch theme for the Sync the Veil card game."
+min_version = "0.164.0"
+
+[author]
+name = "Project Sync the Veil"

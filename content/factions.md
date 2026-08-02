@@ -1,5 +1,5 @@
 ---
 title: "Factions"
-description: "Choose a Veilshift faction and discover its tactical identity."
+description: "Choose your faction in Sync the Veil and discover its tactical identity."
 type: "factions"
 ---

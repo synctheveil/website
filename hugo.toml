@@ -1,8 +1,8 @@
 baseURL = "http://localhost"
 locale = "en-GB"
-title = "Veilshift"
-theme = "veilshift"
+title = "Sync the Veil"
+theme = "sync-the-veil"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 [params]
-description = "Veilshift is a cyber-occult expandable card game of tactical control across two realities."
+description = "Sync the Veil is a cyber-occult expandable card game of tactical control across two realities."

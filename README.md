@@ -1,8 +1,8 @@
-# Veilshift website
+# Sync the Veil website
 
-Static Hugo site for the Veilshift card game.
+Static Hugo site for the Sync the Veil card game.
 
-The presentation is packaged as the reusable `themes/veilshift` Hugo theme.
+The presentation is packaged as the reusable `themes/sync-the-veil` Hugo theme.
 
 ## Local development
 
