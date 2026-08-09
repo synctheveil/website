@@ -89,3 +89,7 @@ h1,h2,h3{font-family:var(--heading);font-weight:600;letter-spacing:-.035em}
   .hero-copy h1{font-size:clamp(4rem,18vw,6rem)}
   .wordmark{width:3.8rem;height:3.8rem}
 }
+
+/* Keep the logo on its intended clean-black brand field across site chrome. */
+.wordmark{background:#000}
+.wordmark-image{mix-blend-mode:normal}
