@@ -73,6 +73,7 @@
 @media (max-width:700px){.wordmark{font-size:1.2rem;letter-spacing:.18em}}
 
 /* Typography pairs cinematic card-box headlines with precise digital UI text. */
+.hero-copy h1{line-height:1.08}
 .section-intro h2,.factions-section>h2,.shift-copy h2,.playtest h2,
 .factions-page>h1,.playtest-page h1,.section-intro h1,
 .how-to-play-page .shift-copy h1,.overview-copy h2{
