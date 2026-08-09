@@ -73,16 +73,16 @@
 @media (max-width:700px){.wordmark{font-size:1.2rem;letter-spacing:.18em}}
 
 /* Serif headlines add printed-card character while display and mono faces retain the digital layer. */
-h1,h2,h3{font-family:var(--heading);font-weight:600}
+h1,h2,h3{font-family:var(--heading);font-weight:600;letter-spacing:-.035em}
 .hero-copy h1{font-size:clamp(5rem,7.4vw,8rem);line-height:1.02}
 .section-intro h2,.factions-section>h2,.shift-copy h2,.playtest h2,
 .factions-page>h1,.playtest-page h1,.section-intro h1,
 .how-to-play-page .shift-copy h1,.overview-copy h2{
   font-size:clamp(4rem,5.7vw,6.5rem);
   line-height:.94;
-  letter-spacing:-.012em;
+  letter-spacing:-.035em;
 }
-.victory-copy h3{line-height:.9;letter-spacing:-.015em}
+.victory-copy h3{line-height:.9;letter-spacing:-.035em}
 .principles p,.overview-loop p{font-size:.86rem;line-height:1.5}
 .wordmark{letter-spacing:.2em}
 @media (max-width:700px){
