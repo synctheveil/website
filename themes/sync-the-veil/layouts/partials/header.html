@@ -6,6 +6,7 @@
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
     <a href="{{ "/game/" | relURL }}"{{ if eq .RelPermalink ("/game/" | relURL) }} aria-current="page"{{ end }}>The game</a>
+    <a href="{{ "/cards/" | relURL }}"{{ if eq .RelPermalink ("/cards/" | relURL) }} aria-current="page"{{ end }}>Cards</a>
     <a href="{{ "/factions/" | relURL }}"{{ if eq .RelPermalink ("/factions/" | relURL) }} aria-current="page"{{ end }}>Factions</a>
     <a href="{{ "/how-to-play/" | relURL }}"{{ if eq .RelPermalink ("/how-to-play/" | relURL) }} aria-current="page"{{ end }}>How to play</a>
     <a class="mobile-playtest" href="{{ "/playtest/" | relURL }}"{{ if eq .RelPermalink ("/playtest/" | relURL) }} aria-current="page"{{ end }}>Enter the playtest</a>

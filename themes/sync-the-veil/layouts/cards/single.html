@@ -1,0 +1,37 @@
+{{ define "main" }}
+<main id="main" class="card-directory">
+  <header class="directory-intro">
+    <h1>Card directory</h1>
+    <p>The operatives, protocols, and infrastructure of New Carthage. Explore the prototype across four factions and two realities.</p>
+    <p class="prototype-note">In development. Names, stats, and effects may change. Starter decks are Prototype 0.2; four-faction decks and the experimental candidate pool are Prototype 0.3.</p>
+  </header>
+
+  <form class="card-filters" role="search" aria-label="Filter cards" hidden>
+    <div class="card-search"><label for="card-search">Search cards</label><input id="card-search" type="search" name="q" placeholder="Name, rules text, or card ID" autocomplete="off" /></div>
+    <div><label for="card-faction">Faction</label><select id="card-faction" name="faction"><option value="">All factions</option>{{ range slice "Ashen Court" "Helix Dominion" "Neon Saints" "Null Assembly" "Neutral" "Shared" }}<option>{{ . }}</option>{{ end }}</select></div>
+    <div><label for="card-type">Card type</label><select id="card-type" name="type"><option value="">All types</option>{{ range slice "Operative" "Protocol" "Asset" "Leader" "Junction" }}<option>{{ . }}</option>{{ end }}</select></div>
+    <div><label for="card-set">Set</label><select id="card-set" name="set"><option value="">All sets</option>{{ range slice "Starter decks" "Four-faction decks" "Candidate pool" }}<option>{{ . }}</option>{{ end }}</select></div>
+    <button type="reset" class="filter-reset">Reset filters</button>
+  </form>
+
+  <div class="directory-summary"><p id="card-count" role="status" aria-live="polite" aria-atomic="true">{{ len hugo.Data.cards }} cards</p><span>Alphabetical · unique designs</span></div>
+  <div class="card-grid">
+    {{ range hugo.Data.cards }}
+    <article id="{{ .id | urlize }}" class="directory-card faction-{{ .faction | urlize }}" data-card data-faction="{{ .faction }}" data-type="{{ .type }}" data-set="{{ .collection }}" data-search="{{ printf "%s %s %s" .name .id .text | lower }}" aria-labelledby="name-{{ .id | urlize }}">
+      <div class="card-identity"><span>{{ .faction }}</span><span>{{ .type }}</span></div>
+      <div class="card-title">
+        <h2 id="name-{{ .id | urlize }}"><a href="#{{ .id | urlize }}">{{ .name }}</a></h2>
+        {{ if isset . "cost" }}<div class="card-cost"><b>{{ .cost }}</b><span>Bandwidth</span></div>{{ end }}
+      </div>
+      {{ if or .entry .timing }}<p class="card-traits">{{ with .entry }}<span class="entry-{{ . | lower }}">{{ . }} entry</span>{{ end }}{{ with .timing }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
+      <p class="card-rules">{{ if eq .text "—" }}<span class="no-ability">No additional ability.</span>{{ else }}{{ .text }}{{ end }}</p>
+      {{ if eq .type "Operative" }}<dl class="card-stats"><div><dt>Power</dt><dd>{{ .power }}</dd></div><div><dt>Integrity</dt><dd>{{ .integrity }}</dd></div></dl>{{ end }}
+      <footer class="card-source">{{ if not (hasPrefix .id "leader-") }}<span class="card-reference">{{ .id }}</span>{{ end }}<span>{{ .collection }} · {{ .version }}</span>{{ with .copies }}<span>{{ . }}× in deck</span>{{ end }}</footer>
+    </article>
+    {{ end }}
+  </div>
+  <div class="card-empty" hidden><h2>No matching cards</h2><p>Try a different name, rules phrase, or combination of filters.</p><button type="button" class="filter-reset" data-clear-cards>Clear all filters</button></div>
+  <p class="directory-source">This directory includes the starter decks, four-faction playtest decks, and candidate pool. Candidate cards are experimental alternatives, not additions to the starter decks. Leaders and Junctions sit outside the 30-card main decks.</p>
+</main>
+<script src="{{ "cards.js" | relURL }}" defer></script>
+{{ end }}
