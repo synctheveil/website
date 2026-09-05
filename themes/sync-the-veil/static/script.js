@@ -19,6 +19,14 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(open));
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navigation.classList.contains("open")) {
+    navigation.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.focus();
+  }
+});
+
 navigation.addEventListener("click", () => {
   navigation.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");

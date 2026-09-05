@@ -93,3 +93,90 @@ h1,h2,h3{font-family:var(--heading);font-weight:700;letter-spacing:-.045em}
   .hero-copy h1{font-size:clamp(4rem,18vw,6rem)}
   .wordmark{width:3.8rem;height:3.8rem}
 }
+
+/* Refine the existing identity: readable brand, quieter supporting type, clear actions. */
+:root{--gutter:clamp(1.3rem,5vw,6rem)}
+::selection{background:var(--cyan);color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+.site-header{height:6rem;padding-inline:var(--gutter);grid-template-columns:1fr auto 1fr;gap:2rem;background:linear-gradient(180deg,rgba(3,7,13,.65),transparent)}
+.brand,.site-header.fixed .brand{display:flex;align-items:center;gap:.65rem;width:max-content;height:auto;max-width:100%}
+.brand .wordmark-image{width:3.5rem;height:3.5rem;flex:none}
+.brand-name{font:600 .95rem/1.1 var(--heading);letter-spacing:.035em;white-space:nowrap}
+.site-header.fixed .brand .wordmark-image{width:3rem;height:3rem}
+.site-nav{gap:2.25rem}
+.site-nav a{position:relative;padding-block:.5rem}
+.site-nav a[aria-current="page"]{color:var(--cyan);box-shadow:0 1px var(--cyan)}
+.site-nav .mobile-playtest{display:none}
+.hero{min-height:min(54rem,100svh);padding:10rem var(--gutter) 7rem}
+.hero-copy{width:min(55rem,67vw)}
+.hero-copy h1{font-size:clamp(3.4rem,6.8vw,7.5rem);line-height:1.04;letter-spacing:-.045em}
+.hero-copy>p{max-width:35rem;font-size:1.08rem;line-height:1.7}
+.signal-rule{width:27rem;margin-top:1.8rem}
+.signal-rule span{width:4rem}
+.hero-actions{gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.button-primary{color:var(--ink);transition:color .2s,background-color .2s}
+.button-primary::before{background:var(--cyan);transition:background-color .2s}
+.button-primary:hover,.button-primary:hover::before{background:#91eaf5}
+.button-primary:focus-visible{outline:0;box-shadow:inset 0 0 0 3px var(--paper)}
+.button-primary:focus-visible::before{inset:4px}
+.home-overview{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;padding:6rem var(--gutter) 7rem}
+.overview-copy h2{font-size:clamp(2.4rem,3.55vw,4rem);line-height:1.08;letter-spacing:-.035em}
+.overview-copy>p{font-size:1rem;line-height:1.8;max-width:36rem}
+.overview-loop{margin:2rem 0}
+.overview-loop li{grid-template-columns:2rem 1fr;padding:1.1rem 0}
+.overview-loop li>span{font:500 .8rem/1.8 var(--mono)}
+.overview-loop b{font-size:1.05rem;letter-spacing:.035em}
+.overview-loop p,.principles p{font-size:.95rem}
+.victory-panel{align-self:start;margin-top:.4rem}
+.victory-art{filter:none}
+.victory-copy{gap:1.5rem;padding:2rem}
+.victory-number{font-size:5rem;font-weight:500;line-height:1}
+.victory-copy h3{font-size:clamp(1.8rem,2.65vw,3rem);line-height:1.05}
+.victory-copy p:not(.facts){font-size:.95rem}
+.victory-copy .section-number{font-size:.65rem;margin-bottom:.75rem}
+.site-footer{padding:2rem var(--gutter);gap:2rem}
+.site-footer nav{gap:2rem}
+.site-footer nav a:hover{color:var(--cyan)}
+.game-section{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:4vw}
+.junction button{font-size:1rem;letter-spacing:.02em;gap:.5rem}
+.layer-readout{padding:.8rem .25rem;font-size:.6rem;letter-spacing:0}
+.section-intro h1,.how-to-play-page .shift-copy h1,.playtest-page h1,.factions-page>h1{font-size:clamp(3rem,5vw,5.5rem);line-height:1.02}
+.how-to-play-page{padding-top:6rem}
+.how-to-play-page .shift-copy h1{font-size:clamp(2.75rem,3.7vw,4.5rem)}
+.faction-stage h2{font-size:clamp(2rem,3.4vw,3.8rem);line-height:1.08;letter-spacing:-.035em}
+.faction b{font-size:clamp(1.5rem,2.6vw,2.7rem);letter-spacing:.015em}
+@media (max-width:1100px){
+  .site-header{gap:1rem}.site-nav{gap:1.5rem}.header-cta{padding:1rem .9rem}
+}
+@media (max-width:1000px){
+  .site-header{grid-template-columns:1fr auto}
+  .menu-toggle{min-height:44px;padding:.75rem 0 .75rem 1rem;cursor:pointer}
+  .site-nav{gap:0;border-top:1px solid var(--line);box-shadow:0 1rem 2rem rgba(0,0,0,.4)}
+  .site-nav a{padding:1.2rem var(--gutter)}
+  .site-nav .mobile-playtest{display:block;color:var(--amber)}
+  .site-nav a[aria-current="page"]{box-shadow:inset 3px 0 var(--cyan)}
+  .hero-copy{width:80vw}
+  .game-section{grid-template-columns:1fr}
+  .home-overview{grid-template-columns:1fr 1fr;gap:3rem}
+  .victory-copy{grid-template-columns:1fr;gap:1rem}
+  .site-footer{grid-template-columns:1fr auto}.site-footer p{grid-column:1/-1;justify-self:start}
+}
+@media (max-width:700px){
+  .site-header{height:5rem}
+  .brand .wordmark-image{width:3rem;height:3rem}.brand-name{font-size:.9rem}
+  .hero{min-height:46rem;min-height:max(44rem,94svh);padding:9rem var(--gutter) 4rem}
+  .hero-copy{width:100%}.hero-copy h1{font-size:clamp(2.75rem,10.9vw,4.6rem);line-height:1.07}
+  .hero-copy>p{font-size:1rem;max-width:30rem;margin-top:1.5rem}
+  .hero-art::after{background:linear-gradient(0deg,var(--ink) 2%,rgba(3,7,13,.9) 38%,rgba(3,7,13,.15) 90%)}
+  .hero-actions{gap:1.5rem}.button{min-width:0;width:100%;max-width:23rem}
+  .home-overview{grid-template-columns:1fr;gap:3rem;padding-block:4rem}
+  .overview-copy h2{font-size:clamp(2.25rem,9vw,3.3rem)}
+  .victory-copy{grid-template-columns:auto minmax(0,1fr);padding:1.5rem;gap:1rem}
+  .victory-number{font-size:3.5rem}.victory-copy h3{font-size:1.75rem}
+  .victory-copy .facts{font-size:.65rem;line-height:1.8;letter-spacing:.06em}.facts i{padding-inline:.4rem}
+  .site-footer{grid-template-columns:1fr;gap:1.5rem}.site-footer nav{gap:1.5rem}
+  .faction{grid-template-columns:1.4rem 2.6rem minmax(0,1fr);gap:.65rem}
+  .faction small{display:block;line-height:1.5}
+  .junction.active .junction-visual{flex:none}
+  .how-to-play-page{padding-top:5rem}
+}

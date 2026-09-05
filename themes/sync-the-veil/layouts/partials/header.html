@@ -1,12 +1,14 @@
 <header class="site-header" data-header>
-  <a class="wordmark" href="{{ "/" | relURL }}" aria-label="Sync the Veil home">
+  <a class="wordmark brand" href="{{ "/" | relURL }}" aria-label="Sync the Veil home">
     <img class="wordmark-image" src="{{ "assets/sync-the-veil-logo-dual-reality-textless-transparent.png" | relURL }}" width="256" height="256" alt="" />
+    <span class="brand-name">Sync the Veil</span>
   </a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-    <a href="{{ "/game/" | relURL }}">The game</a>
-    <a href="{{ "/factions/" | relURL }}">Factions</a>
-    <a href="{{ "/how-to-play/" | relURL }}">How to play</a>
+    <a href="{{ "/game/" | relURL }}"{{ if eq .RelPermalink ("/game/" | relURL) }} aria-current="page"{{ end }}>The game</a>
+    <a href="{{ "/factions/" | relURL }}"{{ if eq .RelPermalink ("/factions/" | relURL) }} aria-current="page"{{ end }}>Factions</a>
+    <a href="{{ "/how-to-play/" | relURL }}"{{ if eq .RelPermalink ("/how-to-play/" | relURL) }} aria-current="page"{{ end }}>How to play</a>
+    <a class="mobile-playtest" href="{{ "/playtest/" | relURL }}"{{ if eq .RelPermalink ("/playtest/" | relURL) }} aria-current="page"{{ end }}>Enter the playtest</a>
   </nav>
   <a class="header-cta" href="{{ "/playtest/" | relURL }}">Enter the playtest</a>
 </header>
